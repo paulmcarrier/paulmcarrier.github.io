@@ -30,7 +30,7 @@ twitter_username: paulmcarrier
 github_username:  paulmcarrier
 
 # Build settings
-theme: slate
+theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 
