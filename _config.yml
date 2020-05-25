@@ -27,6 +27,8 @@ url: "paulmcarrier.github.io" # the base hostname & protocol for your site, e.g.
 twitter_username: paulmcarrier
 github_username:  paulmcarrier
 
+google_analytics: UA-167516557-1
+
 # Build settings
 theme: jekyll-theme-slate
 # plugins:
