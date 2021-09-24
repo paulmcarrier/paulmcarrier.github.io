@@ -6,4 +6,4 @@ layout: default
 title: Home
 ---
 
-This Nice. Very Nice. Very Very nice
+Under Construction.
