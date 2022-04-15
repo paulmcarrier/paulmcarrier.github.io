@@ -26,8 +26,15 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "paulmcarrier.com" # the base hostname & protocol for your site, e.g. http://example.com
 data:
   social:
-    twitter: paulmcarrier
-github_username:  paulmcarrier
+  -
+    title: twitter
+    url: https://twitter.com/paulmcarrier
+    icon: fab fa-twitter
+  -
+    title: github
+    url: https://github.com/paulmcarrier
+    icon: fab fa-github
+
 
 # Build settings
 remote_theme: paulmcarrier/monophase@main
