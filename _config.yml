@@ -28,7 +28,7 @@ twitter_username: paulmcarrier
 github_username:  paulmcarrier
 
 # Build settings
-remote_theme: pages-themes/tactile@v0.2.0
+remote_theme: paulmcarrier/monophase@main
 plugins:
 - jekyll-remote-theme
 - jekyll-feed
