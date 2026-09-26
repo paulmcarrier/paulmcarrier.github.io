@@ -1,0 +1,45 @@
+<header class="masthead">
+  <div class="masthead-top">
+    <div class="masthead-title">
+      <img class="avatar" src="{{ '/assets/img/headshot.png' | relative_url }}" alt="{{ site.title }}">
+      <span class="masthead-title-text">
+        <a href="{{ '/' | relative_url }}" title="Home">{{ site.title }}</a>
+        <small class="tagline">{{ site.tagline }}</small>
+      </span>
+    </div>
+
+    {% if site.data.social %}
+      {% assign github_social = nil %}
+      {% for social in site.data.social %}
+        {% if github_social == nil %}
+          {% assign social_title = social.title | default: '' | downcase %}
+          {% assign social_icon = social.icon | default: '' | downcase %}
+          {% if social_title == 'github' or social_icon contains 'github' %}
+            {% assign github_social = social %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if github_social %}
+        <a class="github-link" href="{{ github_social.url }}" target="_blank" rel="noopener">
+          <i class="{{ github_social.icon | default: 'fab fa-github' }}" title="{{ github_social.title | default: 'GitHub' }}"></i>
+          <span>{{ github_social.title | default: 'GitHub' }}</span>
+        </a>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  {% if site.data.navigation %}
+    <nav class="nav">
+      <ul class="nav-list">
+      {% for item in site.data.navigation %}
+        <li class="nav-item">
+          <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}current{% endif %}">
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+</header>
