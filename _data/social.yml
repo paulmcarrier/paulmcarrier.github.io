@@ -1,0 +1,9 @@
+- title: GitHub
+  url: https://github.com/paulmcarrier
+  icon: fab fa-github
+- title: Twitter
+  url: https://twitter.com/paulmcarrier
+  icon: fab fa-twitter
+- title: Email
+  url: mailto:paulmcarrier@gmail.com
+  icon: fas fa-envelope
