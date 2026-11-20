@@ -4,31 +4,43 @@ title: Resume
 permalink: /resume/
 ---
 <style>
-.resume .lead { font-size: 1.15em; font-weight: 700; margin: 0 0 0.3em; }
-.resume h2 { margin-top: 1.6em; padding-bottom: 0.25em; border-bottom: 2px solid rgba(128,128,128,0.35); }
-.resume .job { display: flex; gap: 1em; align-items: flex-start; padding: 1em; margin: 1em 0; border: 1px solid rgba(128,128,128,0.3); border-radius: 10px; }
-.resume .job img { width: 64px; height: 64px; border-radius: 12px; object-fit: contain; background: #fff; flex-shrink: 0; }
-.resume .job-body { flex: 1; min-width: 0; }
-.resume .job h3 { margin: 0; font-size: 1.15em; }
+.resume { --line: rgba(128,128,128,0.3); --maroon: #862633; }
+.resume .hero { background: linear-gradient(135deg, #1f2937, #111827); color: #fff; border-radius: 16px; padding: 1.5em; display: flex; gap: 1.2em; align-items: center; margin-bottom: 1.4em; }
+.resume .hero img { width: 92px; height: 92px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); flex-shrink: 0; }
+.resume .hero h1 { margin: 0; font-size: 1.8em; color: #fff; }
+.resume .hero p { margin: 0.2em 0 0; opacity: 0.85; color: #fff; }
+.resume .hero a { color: #fff; text-decoration: underline; }
+.resume h2 { margin: 1.6em 0 0.7em; font-size: 0.85em; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
+.resume .card { display: flex; gap: 1.1em; padding: 1.1em; margin-bottom: 1em; border: 1px solid var(--line); border-left-width: 6px; border-radius: 12px; }
+.resume .card img { width: 84px; height: 84px; object-fit: contain; flex-shrink: 0; }
+.resume .card-body { flex: 1; min-width: 0; }
+.resume .card h3 { margin: 0; font-size: 1.15em; }
 .resume .role { font-weight: 600; margin: 0.1em 0; }
 .resume .meta { opacity: 0.75; font-size: 0.9em; margin: 0 0 0.5em; }
-.resume .badge { display: inline-block; padding: 0.05em 0.6em; border-radius: 999px; background: rgba(128,128,128,0.18); font-weight: 600; margin-right: 0.4em; }
-.resume .job ul { margin: 0.4em 0 0 1.1em; padding: 0; }
-.resume .job li { margin: 0.3em 0; }
-.resume .skill-row { margin: 0.6em 0; }
-.resume .skill-label { font-weight: 700; display: block; margin-bottom: 0.2em; }
-.resume .tag { display: inline-block; padding: 0.1em 0.65em; margin: 0.15em 0.25em 0.15em 0; border-radius: 999px; border: 1px solid rgba(128,128,128,0.4); font-size: 0.88em; }
-@media (max-width: 600px) { .resume .job { flex-direction: column; } }
+.resume .badge { display: inline-block; padding: 0.05em 0.6em; margin-right: 0.4em; border-radius: 999px; background: rgba(128,128,128,0.2); font-weight: 600; }
+.resume .card ul { margin: 0.4em 0 0 1.1em; padding: 0; }
+.resume .card li { margin: 0.3em 0; }
+.resume .tag { display: inline-block; padding: 0.1em 0.7em; margin: 0.15em 0.25em 0.15em 0; border: 1px solid rgba(128,128,128,0.4); border-radius: 999px; font-size: 0.88em; }
+.resume .edu { background: var(--maroon); color: #fff; border-radius: 14px; padding: 1.3em; display: flex; align-items: center; gap: 1.3em; flex-wrap: wrap; }
+.resume .edu .logo { background: #fff; border-radius: 10px; padding: 0.6em 1em; }
+.resume .edu .logo img { height: 62px; display: block; }
+.resume .edu p { margin: 0; color: #fff; }
+@media (max-width: 600px) { .resume .hero, .resume .card { flex-direction: column; } }
 </style>
 <div class="resume">
-<p class="lead">Senior Software Engineer | Cloud Capacity &amp; Platform Engineering</p>
-<p>Contact: <a href="mailto:paulmcarrier@gmail.com">paulmcarrier@gmail.com</a></p>
-<h2>Summary</h2>
+<div class="hero">
+<img src="/assets/img/headshot.png" alt="Paul M. Carrier">
+<div>
+<h1>Paul M. Carrier</h1>
+<p>Senior Software Engineer | Cloud Capacity &amp; Platform Engineering</p>
+<p><a href="mailto:paulmcarrier@gmail.com">paulmcarrier@gmail.com</a></p>
+</div>
+</div>
 <p>Senior Software Engineer with 10+ years in cloud infrastructure, DevOps, and platform engineering. Builds Python and TypeScript tooling that automatically scales a large AWS platform for high-traffic live events and streaming debuts on Disney+ and Hulu. Leads projects from PRD to delivery, performs design reviews, and mentors junior engineers.</p>
 <h2>Experience</h2>
-<div class="job">
+<div class="card" style="border-left-color:#113ccf">
 <img src="/assets/img/logos/disney.jpg" alt="The Walt Disney Company logo">
-<div class="job-body">
+<div class="card-body">
 <h3>The Walt Disney Company</h3>
 <p class="role">Senior Software Engineer, Capacity Management</p>
 <p class="meta"><span class="badge">Nov 2021 – Present</span>Remote</p>
@@ -42,9 +54,9 @@ permalink: /resume/
 </ul>
 </div>
 </div>
-<div class="job">
+<div class="card" style="border-left-color:#e03127">
 <img src="/assets/img/logos/airtank.jpg" alt="Airtank logo">
-<div class="job-body">
+<div class="card-body">
 <h3>Airtank Inc.</h3>
 <p class="role">Senior Operations Engineer</p>
 <p class="meta"><span class="badge">Nov 2018 – Nov 2021</span>Remote (Peterborough, NH)</p>
@@ -58,9 +70,9 @@ permalink: /resume/
 </ul>
 </div>
 </div>
-<div class="job">
+<div class="card" style="border-left-color:#f08a1c">
 <img src="/assets/img/logos/illuminate.jpg" alt="Illuminate Education logo">
-<div class="job-body">
+<div class="card-body">
 <h3>IO Education / Illuminate Education</h3>
 <p class="role">Senior DevOps Engineer</p>
 <p class="meta"><span class="badge">Jan 2017 – Nov 2018</span>Remote (Atlanta, GA / Irvine, CA)</p>
@@ -71,9 +83,9 @@ permalink: /resume/
 </ul>
 </div>
 </div>
-<div class="job">
+<div class="card" style="border-left-color:#2fb67c">
 <img src="/assets/img/logos/ziftr.jpg" alt="Ziftr logo">
-<div class="job-body">
+<div class="card-body">
 <h3>MyVBO / Ziftr LLC</h3>
 <p class="role">DevOps Engineer</p>
 <p class="meta"><span class="badge">Jul 2015 – Dec 2016</span>Remote (Merrimack, NH)</p>
@@ -85,11 +97,12 @@ permalink: /resume/
 </div>
 </div>
 <h2>Skills</h2>
-<div class="skill-row"><span class="skill-label">Languages</span><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Bash</span></div>
-<div class="skill-row"><span class="skill-label">AWS</span><span class="tag">EC2</span><span class="tag">Auto Scaling</span><span class="tag">EKS</span><span class="tag">ECS</span><span class="tag">ALB</span><span class="tag">DynamoDB</span><span class="tag">CloudFormation</span><span class="tag">CloudFront</span><span class="tag">CloudWatch</span><span class="tag">RDS</span><span class="tag">S3</span><span class="tag">VPC</span><span class="tag">Route 53</span></div>
-<div class="skill-row"><span class="skill-label">Containers</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Nginx</span></div>
-<div class="skill-row"><span class="skill-label">CI/CD &amp; Operations</span><span class="tag">GitHub Actions</span><span class="tag">PagerDuty</span><span class="tag">Atlassian</span><span class="tag">Linux</span></div>
-<div class="skill-row"><span class="skill-label">Practices</span><span class="tag">Capacity planning</span><span class="tag">Auto-scaling</span><span class="tag">AI-driven development</span><span class="tag">Incident response</span><span class="tag">PCI compliance</span></div>
+<div>
+<span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Bash</span><span class="tag">EC2</span><span class="tag">Auto Scaling</span><span class="tag">EKS</span><span class="tag">ECS</span><span class="tag">ALB</span><span class="tag">DynamoDB</span><span class="tag">CloudFormation</span><span class="tag">CloudFront</span><span class="tag">CloudWatch</span><span class="tag">RDS</span><span class="tag">S3</span><span class="tag">VPC</span><span class="tag">Route 53</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">GitHub Actions</span><span class="tag">PagerDuty</span><span class="tag">Atlassian</span><span class="tag">Linux</span>
+</div>
 <h2>Education</h2>
-<p><strong>Sacred Heart University</strong>, Fairfield, CT. B.S., Natural Sciences, 2011</p>
+<div class="edu">
+<div class="logo"><img src="/assets/img/logos/shu.png" alt="Sacred Heart University logo"></div>
+<p><strong>Bachelor of Science, Natural Sciences</strong><br>Fairfield, CT · 2011</p>
+</div>
 </div>
