@@ -17,4 +17,32 @@
     display: flex;
     flex-direction: column;
   }
+
+  /* Animate page changes (home <-> resume). Browsers without support just navigate normally. */
+  @view-transition {
+    navigation: auto;
+  }
+
+  /* The avatar and name morph between the site header and the resume heading. */
+  .masthead-title .avatar { view-transition-name: pm-avatar; }
+  .masthead-title-text > a { view-transition-name: pm-name; }
+
+  ::view-transition-group(pm-avatar),
+  ::view-transition-group(pm-name) {
+    animation-duration: 0.55s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.4s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none !important;
+    }
+  }
 </style>
