@@ -1,15 +1,20 @@
 ---
-layout: page
+layout: resume
 title: Resume
 permalink: /resume/
+hide_masthead: true
 ---
 <style>
 .resume { --line: rgba(128,128,128,0.3); --maroon: #862633; }
-.resume .hero { background: linear-gradient(135deg, #1f2937, #111827); color: #fff; border-radius: 16px; padding: 1.5em; display: flex; gap: 1.2em; align-items: center; margin-bottom: 1.4em; }
-.resume .hero img { width: 92px; height: 92px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); flex-shrink: 0; }
-.resume .hero h1 { margin: 0; font-size: 1.8em; color: #fff; }
+.resume .hero { position: relative; padding-top: 2.6em; animation: hero-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; background: linear-gradient(135deg, #1f2937, #111827); color: #fff; border-radius: 16px; padding: 1.5em; display: flex; gap: 1.2em; align-items: center; margin-bottom: 1.4em; }
+.resume .hero img { view-transition-name: pm-avatar; width: 92px; height: 92px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); flex-shrink: 0; }
+.resume .hero h1 { view-transition-name: pm-name; width: fit-content; margin: 0; font-size: 1.8em; color: #fff; }
 .resume .hero p { margin: 0.2em 0 0; opacity: 0.85; color: #fff; }
 .resume .hero a { color: #fff; text-decoration: underline; }
+.resume .hero a.back { position: absolute; top: 0.9em; left: 1.2em; text-decoration: none; font-size: 0.9em; font-weight: 600; opacity: 0.85; }
+.resume .hero a.back:hover { opacity: 1; text-decoration: underline; }
+@keyframes hero-in { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .resume .hero { animation: none; } }
 .resume h2 { margin: 1.6em 0 0.7em; font-size: 0.85em; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
 .resume .card { display: flex; gap: 1.1em; padding: 1.1em; margin-bottom: 1em; border: 1px solid var(--line); border-left-width: 6px; border-radius: 12px; }
 .resume .card img { width: 84px; height: 84px; object-fit: contain; flex-shrink: 0; }
@@ -29,6 +34,7 @@ permalink: /resume/
 </style>
 <div class="resume">
 <div class="hero">
+<a class="back" href="/">&larr; Home</a>
 <img src="/assets/img/headshot.png" alt="Paul M. Carrier">
 <div>
 <h1>Paul M. Carrier</h1>
