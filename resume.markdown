@@ -6,7 +6,7 @@ hide_masthead: true
 ---
 <style>
 .resume { --line: rgba(128,128,128,0.3); --maroon: #862633; }
-.resume .hero { position: relative; padding-top: 2.6em; animation: hero-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; background: linear-gradient(135deg, #1f2937, #111827); color: #fff; border-radius: 16px; padding: 1.5em; display: flex; gap: 1.2em; align-items: center; margin-bottom: 1.4em; }
+.resume .hero { position: relative; animation: hero-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; background: linear-gradient(135deg, #1f2937, #111827); color: #fff; border-radius: 16px; padding: 3.2em 1.5em 1.5em; display: flex; gap: 1.2em; align-items: center; margin-bottom: 1.4em; }
 .resume .hero img { view-transition-name: pm-avatar; width: 92px; height: 92px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); flex-shrink: 0; }
 .resume .hero h1 { view-transition-name: pm-name; width: fit-content; margin: 0; font-size: 1.8em; color: #fff; }
 .resume .hero p { margin: 0.2em 0 0; opacity: 0.85; color: #fff; }
